@@ -271,7 +271,7 @@ var parameters = {
 var authToken = '2fe40f6ab37b43cca925d6fac9b05a0e';
 
 // do the XHR request
-var base_url = 'http://api.football-data.org/v1/';
+var base_url = 'https://api.football-data.org/v1/';
 var query_url = base_url + encodeParameters(parameters) + "/" + "teams";
 
 // first API request accessing all of the teams
