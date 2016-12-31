@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="js/script.js"></script>
+    <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>mySquad</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="description">
+            <h1>mySquad</h1>
+            <p>mySquad visualises where your favourite team players come from and what percentage of the team market value a players value is. As data input mySquad uses <a href="http://api.football-data.org/index">Football Data</a>, for vusialisation
+                <a href="https://developers.google.com/chart/interactive/docs/gallery/geochart">Google GeoChart</a> and <a href="https://plot.ly/javascript/">plotly.js</a>. Choose team, click visualise and explore!</p>
+        </div>
+        <div id="input">
+            <label>
+            <select id="myteam">
+              <option>Select your team</option>
+            </select>
+        </label>
+            <input type="button" id="search_button" value="Visualise">
+        </div>
+        <div id="output"></div>
+        <div id="regions_div"></div>
+        <div id="pie-container">
+            <div id="countryPie">
+            </div>
+            <div id="playerPie"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

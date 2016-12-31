@@ -1,0 +1,255 @@
+/*TABLE OF CONTENTS*/
+
+/*CSS reset*/
+/*App wrapper*/
+/*App description*/
+/*Select menu*/
+/*Crest, Name*/
+/*Pie chart container*/
+
+/*----------------------------CSS reset------------------------------*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*-----------App wrapper-----------*/
+#wrapper {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+/*-----------App description-----------*/
+
+h1 {
+  font-size: 24px;
+  font-family: helvetica;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+p {
+  font-size: 16px;
+  font-family: helvetica;
+  text-align:justify;
+  line-height: 1.2;
+}
+/*-----------Select menu-----------*/
+
+#input {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#search_button, label select {
+  padding: 10px 10px 10px 10px;
+	background: #f8f8f8;
+	color: #444;
+	border: 1px solid black;
+	border-radius: 0;
+	display: inline-block;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	outline: none;
+  font-family: helvetica;
+  font-size: 13px;
+}
+
+#search_button, label select:-moz-focusring {
+	color: transparent;
+	text-shadow: 0 0 0 #444;
+}
+
+#search_button, label select::-ms-expand {
+	display: none;
+}
+
+label:before {
+	content: '';
+	right: 5px;
+	top: -7px;
+	width: 30px;
+	height: 33px;
+	background: #f8f8f8;
+	position: absolute;
+	pointer-events: none;
+	display: block;
+}
+
+label { position: relative; }
+
+label:after {
+	content: '>';
+	font: 16px helvetica, monospace;
+	color: #444;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+	right: 2px;
+	top: -3px;
+	border-bottom: 1px solid #aaa;
+	position: absolute;
+	pointer-events: none;
+	width: 35px;
+	padding: 0 0 5px 0;
+	text-indent: 14px;
+}
+
+/*-----------Crest, Name-----------*/
+#output {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:flex;
+  max-height: 70px;
+}
+
+#crest {
+  height: 70px;
+  width: 70px;
+}
+
+img {
+  max-height: 100%;
+  float: left;
+}
+
+#team-name {
+  width: 100%;
+}
+
+h2 {
+  font-size: 17px;
+  font-family: helvetica;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 70px;
+}
+
+/*-----------Pie chart container-----------*/
+  #pie-container {
+      display: block;
+  }
+/*----------------------------Tablet responsive----------------------------*/
+@media all and (min-width: 700px) {
+
+
+
+  /*-----------App decription-----------*/
+  h1 {
+    font-size: 50px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  /*-----------Crest, Name-----------*/
+  #output {
+    max-height: 120px;
+  }
+
+  #crest {
+    height: 120px;
+    width: 120px;
+  }
+
+
+  h2 {
+    font-size: 38px;
+    line-height: 120px;
+  }
+}
+/*----------------------------Desktop responsive----------------------------*/
+
+@media all and (min-width: 900px) {
+
+  /*-----------App wrapper-----------*/
+  #wrapper {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+
+  /*-----------App decription-----------*/
+
+  h1 {
+    font-size: 60px;
+  }
+
+  p {
+    font-size: 18px;
+
+  }
+
+  /*-----------Crest, Name-----------*/
+  #output {
+    max-height: 160px;
+  }
+
+  #crest {
+    height: 160px;
+    width: 160px;
+  }
+
+
+  h2 {
+    font-size: 40px;
+    line-height: 160px;
+  }
+
+  /*-----------Pie chart container-----------*/
+    #pie-container {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display:flex;
+    }
+    #countryPie {
+        flex: 1;
+    }
+    #playerPie {
+        flex: 1;
+    }
+}
